@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/DS2BossCreator">
+        <file alias="space">Resources/spaceBackground.jpg</file>
+        <file alias="pursuer">Resources/pursuer.png</file>
+        <file alias="dark">Resources/dark.qss</file>
+        <file alias="eye">Resources/icon.png</file>
+    </qresource>
+</RCC>

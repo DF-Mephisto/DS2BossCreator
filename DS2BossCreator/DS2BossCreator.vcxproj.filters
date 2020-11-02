@@ -123,12 +123,6 @@
     <ClCompile Include="DrawingsNet.cpp">
       <Filter>Source Files\Widgets</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_ResizableScrollArea.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_ResizableScrollArea.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
     <ClCompile Include="ResizableScrollArea.cpp">
       <Filter>Source Files\Widgets</Filter>
     </ClCompile>
@@ -156,6 +150,9 @@
       <Filter>Header Files\Widgets</Filter>
     </QtMoc>
     <QtMoc Include="DrawingsNet.h">
+      <Filter>Header Files\Widgets</Filter>
+    </QtMoc>
+    <QtMoc Include="ResizableScrollArea.h">
       <Filter>Header Files\Widgets</Filter>
     </QtMoc>
   </ItemGroup>
@@ -198,9 +195,6 @@
   <ItemGroup>
     <CustomBuild Include="DrawingsEditor.h">
       <Filter>Header Files\Editors</Filter>
-    </CustomBuild>
-    <CustomBuild Include="ResizableScrollArea.h">
-      <Filter>Header Files\Widgets</Filter>
     </CustomBuild>
   </ItemGroup>
 </Project>

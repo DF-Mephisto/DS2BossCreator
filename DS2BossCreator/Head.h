@@ -41,5 +41,6 @@ private slots:
 
 signals:
 	void updateResumeDialog();
+	void processDetached();
 
 };

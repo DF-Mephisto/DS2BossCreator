@@ -6,6 +6,7 @@
 #include "Head.h"
 #include "Helper.h"
 #include "MovesetEditor.h"
+#include "DrawingsEditor.h"
 
 class DS2BossCreator : public QWidget
 {
@@ -25,6 +26,7 @@ private:
 	Helper* spellEditor;
 	Helper* moveEditor;
 	MovesetEditor* movesetEditor;
+	DrawingsEditor* drawingsEditor;
 
 protected:
 	void closeEvent(QCloseEvent* e) override;

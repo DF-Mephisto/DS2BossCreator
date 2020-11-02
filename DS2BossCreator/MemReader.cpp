@@ -160,7 +160,7 @@ int MemReader::hookMemory(DWORD instructionSize, DWORD signatureSize, LPVOID scr
 
 	//Change original game instruction to our jmp
 	memcpy(endBuf + 1, &jmp_address, 4);
-		writeMemory((LPVOID)hook.instructionAddress, endBuf, 5);
+	writeMemory((LPVOID)hook.instructionAddress, endBuf, 5);
 
 	byte nop = 0x90;
 	for (int i = 0; i < instructionSize - 5; i++)

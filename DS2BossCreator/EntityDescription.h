@@ -8,6 +8,7 @@ namespace entity_description
 	{
 		void BulletHelper();
 		void MoveHelper();
+		void DrawingsScript();
 	}
 
 	enum EntryType
@@ -65,6 +66,12 @@ namespace entity_description
 	const DWORD64 worldBulletParamPointer[] = { 0x160B8D0, 0x60, 0x40, 0xD8 };
 	const DWORD64 moveParamPointer[] = { 0x160B8D0, 0x18, 0x440, 0xD8 };
 	const DWORD64 movesetParamPointer[] = { 0x160B8D0, 0x18, 0x430, 0xD8 };
+
+	//DRAWINGS SCRIPT
+	const int drawOriginalInstructionSize = 5;
+	const int drawSignatureSize = 10;
+	const char drawMask[] = "xxxxxxxxxx";
+	const byte drawInstruction[] = { 0xF3, 0x0F, 0x10, 0x47, 0x10, 0xF3, 0x0F, 0x10, 0x57, 0x08 };
 
 	//DISABLE DURABILITY
 	const int wepDuraSignatureSize = 10;

@@ -321,3 +321,7 @@ QToolTip {
 	background: rgba(0, 0, 0, 150);
 	color: white;
 }
+
+QScrollArea {
+	background: rgba(0, 0, 0, 150); 
+}

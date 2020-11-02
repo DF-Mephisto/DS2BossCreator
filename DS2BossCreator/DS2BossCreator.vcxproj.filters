@@ -31,72 +31,132 @@
     <Filter Include="Source Files\Scripts">
       <UniqueIdentifier>{21bc9e3c-b293-4c01-91c9-e616f3a726eb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Dialogs">
+      <UniqueIdentifier>{60df8bb4-56ab-42c7-9c89-6e1539e7f20d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Editors">
+      <UniqueIdentifier>{3f2a9176-d0e1-454c-bc32-ca18ef88ecc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data">
+      <UniqueIdentifier>{ac095e90-d9d0-4816-ba3a-cacfe1db889e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Delegates">
+      <UniqueIdentifier>{281f77f3-c44b-4377-b9ec-89e0d75a105d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Dialogs">
+      <UniqueIdentifier>{8fd5d2ff-9dec-4f2c-ab50-16dc734cec01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Editors">
+      <UniqueIdentifier>{f24bd3e7-d0a5-4963-b599-388b87e13875}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data">
+      <UniqueIdentifier>{738a2e0f-6021-4395-acf6-cf6796cc0b52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Delegates">
+      <UniqueIdentifier>{bb7ae4f9-2a1d-4a90-8b19-c839fdff5080}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Memory">
+      <UniqueIdentifier>{603c86cc-a3aa-4dd0-83ff-d2a3ac35f134}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Memory">
+      <UniqueIdentifier>{858dddc8-3b36-4c9b-90d5-e983f4d2a1c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Widgets">
+      <UniqueIdentifier>{1110e71b-15a4-4d9e-a2ad-3502ded68e0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Widgets">
+      <UniqueIdentifier>{2f63f833-4daf-42f7-9874-2f57c888cb59}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DS2BossCreator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MemReader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Head.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Entry.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="EntityDescription.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FocusControlDelegate.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="HookDialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Helper.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MovesetEditor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ChangeResume.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ResumeDialog.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Dialogs</Filter>
     </ClCompile>
     <ClCompile Include="SpellIdDialog.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="HookDialog.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Entry.cpp">
+      <Filter>Source Files\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="MovesetEditor.cpp">
+      <Filter>Source Files\Editors</Filter>
+    </ClCompile>
+    <ClCompile Include="Helper.cpp">
+      <Filter>Source Files\Editors</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangeResume.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityDescription.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="FocusControlDelegate.cpp">
+      <Filter>Source Files\Delegates</Filter>
+    </ClCompile>
+    <ClCompile Include="MemReader.cpp">
+      <Filter>Source Files\Memory</Filter>
     </ClCompile>
     <ClCompile Include="SpellID.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawingsEditor.cpp">
+      <Filter>Source Files\Editors</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_DrawingsEditor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_DrawingsEditor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DS2BossCreator.cpp">
+      <Filter>Source Files\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="Head.cpp">
+      <Filter>Source Files\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawingsNet.cpp">
+      <Filter>Source Files\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ResizableScrollArea.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ResizableScrollArea.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ResizableScrollArea.cpp">
+      <Filter>Source Files\Widgets</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="DS2BossCreator.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="Head.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
     <QtMoc Include="Entry.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="HookDialog.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="Helper.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="MovesetEditor.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Widgets</Filter>
     </QtMoc>
     <QtMoc Include="ResumeDialog.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Dialogs</Filter>
+    </QtMoc>
+    <QtMoc Include="HookDialog.h">
+      <Filter>Header Files\Dialogs</Filter>
+    </QtMoc>
+    <QtMoc Include="MovesetEditor.h">
+      <Filter>Header Files\Editors</Filter>
+    </QtMoc>
+    <QtMoc Include="Helper.h">
+      <Filter>Header Files\Editors</Filter>
+    </QtMoc>
+    <QtMoc Include="DS2BossCreator.h">
+      <Filter>Header Files\Widgets</Filter>
+    </QtMoc>
+    <QtMoc Include="Head.h">
+      <Filter>Header Files\Widgets</Filter>
+    </QtMoc>
+    <QtMoc Include="DrawingsNet.h">
+      <Filter>Header Files\Widgets</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
@@ -105,23 +165,23 @@
     </QtRcc>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MemReader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EntityDescription.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FocusControlDelegate.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ChangeResume.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SpellIdDialog.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="MemReader.h">
+      <Filter>Header Files\Memory</Filter>
     </ClInclude>
     <ClInclude Include="SpellID.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityDescription.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangeResume.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="FocusControlDelegate.h">
+      <Filter>Header Files\Delegates</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -131,5 +191,16 @@
     <MASM Include="MoveHelper.asm">
       <Filter>Source Files\Scripts</Filter>
     </MASM>
+    <MASM Include="DrawingsScript.asm">
+      <Filter>Source Files\Scripts</Filter>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="DrawingsEditor.h">
+      <Filter>Header Files\Editors</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ResizableScrollArea.h">
+      <Filter>Header Files\Widgets</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>

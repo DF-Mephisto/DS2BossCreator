@@ -124,6 +124,7 @@ void Head::attachProcess(bool state)
 	}
 	else
 	{
+		emit processDetached();
 		equipmentDamageChb->setCheckState(Qt::Unchecked);
 		reader.closeProc();
 		attachProcessBtn->setText("Attach process");

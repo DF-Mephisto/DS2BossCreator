@@ -4,5 +4,6 @@
         <file alias="pursuer">Resources/pursuer.png</file>
         <file alias="dark">Resources/dark.qss</file>
         <file alias="eye">Resources/icon.png</file>
+        <file alias="light">Resources/light.png</file>
     </qresource>
 </RCC>

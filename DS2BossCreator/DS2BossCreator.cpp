@@ -19,8 +19,6 @@ DS2BossCreator::DS2BossCreator(QWidget *parent) : QWidget(parent)
 	setPalette(pal);
 
 	tab = new QTabWidget;
-	//tab->setStyleSheet(".QTabWidget::pane{border: 1px; background-color: rgba(255, 255, 255, 150);}");
-	// .QTabBar::tab {background-color: rgba(255, 255, 255, 170);}
 
 	head = new Head(reader);
 
@@ -36,6 +34,9 @@ DS2BossCreator::DS2BossCreator(QWidget *parent) : QWidget(parent)
 	movesetEditor = new MovesetEditor(reader, tab);
 	tab->addTab(movesetEditor, "Movesets");
 
+	drawingsEditor = new DrawingsEditor(reader, tab);
+	tab->addTab(drawingsEditor, "Drawings");
+
 	//LAYOUT
 	layout = new QVBoxLayout(this);
 	layout->addWidget(head);
@@ -46,6 +47,7 @@ DS2BossCreator::DS2BossCreator(QWidget *parent) : QWidget(parent)
 	connect(spellEditor, SIGNAL(saveResume(ChangeResume)), head, SLOT(addResume(ChangeResume)));
 	connect(moveEditor, SIGNAL(saveResume(ChangeResume)), head, SLOT(addResume(ChangeResume)));
 	connect(movesetEditor, SIGNAL(saveResume(ChangeResume)), head, SLOT(addResume(ChangeResume)));
+	connect(head, SIGNAL(processDetached()), drawingsEditor, SLOT(unhook()));
 }
 
 DS2BossCreator::~DS2BossCreator()

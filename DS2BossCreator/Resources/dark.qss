@@ -153,6 +153,7 @@ QScrollBar::add-page, QScrollBar::sub-page {
 
 QPushButton {
 	background: rgba(0, 0, 0, 150);
+	padding: 12px;
 }
 
 QPushButton:disabled {

@@ -30,11 +30,8 @@ Helper::Helper(MemReader& reader, HelperType helperType, int baseOffset, int ent
 	fillTable();
 
 	load = new QPushButton("Read");
-	load->setMinimumHeight(40);
 	save = new QPushButton("Write");
-	save->setMinimumHeight(40);
 	getEntities = new QPushButton("Get " + entityName);
-	getEntities->setMinimumHeight(40);
 
 	entryLayout = new QVBoxLayout;
 	entryLayout->addWidget(mainAddress, 0.5);

@@ -45,9 +45,7 @@ ResumeDialog::ResumeDialog(MemReader& reader, QVector<ChangeResume>& changes, QW
 	table->setContextMenuPolicy(Qt::CustomContextMenu);
 
 	enableAll = new QPushButton("Enable All");
-	enableAll->setMinimumHeight(40);
 	disableAll = new QPushButton("Disable All");
-	disableAll->setMinimumHeight(40);
 
 	QHBoxLayout* btnLayout = new QHBoxLayout;
 	btnLayout->addWidget(enableAll, 1);

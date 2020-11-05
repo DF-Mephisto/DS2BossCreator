@@ -18,7 +18,6 @@ DrawingsEditor::DrawingsEditor(MemReader& reader, QWidget *parent)
 	yCount->setValue("9");
 	layersCount->setValue("1");
 	QPushButton* setBlocksBtn = new QPushButton("Set");
-	setBlocksBtn->setMinimumHeight(40);
 
 	QHBoxLayout* netSizeLayout = new QHBoxLayout;
 	netSizeLayout->addWidget(xCount, 2);
@@ -57,9 +56,7 @@ DrawingsEditor::DrawingsEditor(MemReader& reader, QWidget *parent)
 	settingLayout->insertSpacing(5, -10);
 
 	enableBtn = new QPushButton("Enable");
-	enableBtn->setMinimumHeight(40);
 	refreshBtn = new QPushButton("Refresh");
-	refreshBtn->setMinimumHeight(40);
 	refreshBtn->setEnabled(false);
 
 	QVBoxLayout* controlLayout = new QVBoxLayout;

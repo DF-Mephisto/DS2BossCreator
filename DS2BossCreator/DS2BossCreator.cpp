@@ -6,7 +6,7 @@ DS2BossCreator::DS2BossCreator(QWidget *parent) : QWidget(parent)
 	setWindowTitle("Dark Souls II Boss Maker @By Mephisto");
 
 	setWindowFlags(Qt::Window);
-	setMinimumSize(800, 700);
+	//setMinimumSize(800, 700);
 
 	QFile styleFile(":/DS2BossCreator/dark");
 	styleFile.open(QFile::ReadOnly);

@@ -34,7 +34,6 @@ HookDialog::HookDialog(MemReader& reader, DWORD instructionSize, DWORD signature
 	table->setItemDelegate(focusDelegate);
 
 	stop = new QPushButton("Stop");
-	stop->setMinimumHeight(40);
 	QHBoxLayout* btnLayout = new QHBoxLayout;
 	btnLayout->addWidget(stop, 0.5);
 	btnLayout->setContentsMargins(20, 0, 20, 0);

@@ -37,9 +37,7 @@ MovesetEditor::MovesetEditor(MemReader& reader, QWidget *parent)
 	fillTable();
 
 	load = new QPushButton("Read");
-	load->setMinimumHeight(40);
 	save = new QPushButton("Write");
-	save->setMinimumHeight(40);
 
 	entryLayout = new QVBoxLayout;
 	entryLayout->addLayout(cbLayout, 0.5);

@@ -4,15 +4,10 @@ Head::Head(MemReader& reader, QWidget *parent)
 	: reader(reader), QWidget(parent)
 {
 	openResumeDialogBtn = new QPushButton("Changes list", this);
-	openResumeDialogBtn->setMinimumHeight(40);
 	openSpellIdDialogBtn = new QPushButton("Spell IDs", this);
-	openSpellIdDialogBtn->setMinimumHeight(40);
 	saveBtn = new QPushButton("Save", this);
-	saveBtn->setMinimumHeight(40);
 	loadBtn = new QPushButton("Load", this);
-	loadBtn->setMinimumHeight(40);
 	attachProcessBtn = new QPushButton("Attach Process", this);
-	attachProcessBtn->setMinimumHeight(40);
 
 	equipmentDamageChb = new QCheckBox("Disable Equpment Damage", this);
 

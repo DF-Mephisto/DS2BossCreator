@@ -34,6 +34,9 @@ DS2BossCreator::DS2BossCreator(QWidget *parent) : QWidget(parent)
 	movesetEditor = new MovesetEditor(reader, tab);
 	tab->addTab(movesetEditor, "Movesets");
 
+	weaponEditor = new WeaponEditor(reader, tab);
+	tab->addTab(weaponEditor, "Weapons");
+
 	drawingsEditor = new DrawingsEditor(reader, tab);
 	tab->addTab(drawingsEditor, "Drawings");
 
@@ -47,6 +50,7 @@ DS2BossCreator::DS2BossCreator(QWidget *parent) : QWidget(parent)
 	connect(spellEditor, SIGNAL(saveResume(ChangeResume)), head, SLOT(addResume(ChangeResume)));
 	connect(moveEditor, SIGNAL(saveResume(ChangeResume)), head, SLOT(addResume(ChangeResume)));
 	connect(movesetEditor, SIGNAL(saveResume(ChangeResume)), head, SLOT(addResume(ChangeResume)));
+	connect(weaponEditor, SIGNAL(saveResume(ChangeResume)), head, SLOT(addResume(ChangeResume)));
 	connect(head, SIGNAL(processDetached()), drawingsEditor, SLOT(unhook()));
 }
 

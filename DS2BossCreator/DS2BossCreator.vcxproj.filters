@@ -126,6 +126,9 @@
     <ClCompile Include="ResizableScrollArea.cpp">
       <Filter>Source Files\Widgets</Filter>
     </ClCompile>
+    <ClCompile Include="WeaponEditor.cpp">
+      <Filter>Source Files\Editors</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="Entry.h">
@@ -154,6 +157,9 @@
     </QtMoc>
     <QtMoc Include="ResizableScrollArea.h">
       <Filter>Header Files\Widgets</Filter>
+    </QtMoc>
+    <QtMoc Include="WeaponEditor.h">
+      <Filter>Header Files\Editors</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>

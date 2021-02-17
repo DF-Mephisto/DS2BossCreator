@@ -9,6 +9,14 @@ namespace entity_description
 		static const QRegExpValidator qwordValidator(QRegExp("[0-9A-Fa-f]{,16}"));
 		static const QRegExpValidator byteValidator(QRegExp("[0-1][0-9]{,2}|25[0-5]|2[0-4][0-9]|[0-9]{,2}"));
 		static const QDoubleValidator floatValidator;
+		static QIntValidator wordValidator;
+
+		static bool init = true;
+		if (init)
+		{
+			wordValidator.setRange(0, 65535);
+			init = false;
+		}
 
 		switch (type)
 		{
@@ -17,6 +25,9 @@ namespace entity_description
 
 		case ByteType:
 			return (QValidator*)&byteValidator;
+
+		case WordType:
+			return (QValidator*)&wordValidator;
 
 		case DWordType:
 			return (QValidator*)&dwordValidator;
@@ -35,6 +46,7 @@ namespace entity_description
 	QMap<EntryType, QString> entryTypeNames = {
 		{StringType, "String"},
 		{ByteType, "Byte"},
+		{WordType, "2 Bytes"},
 		{DWordType, "4 Bytes"},
 		{QWordType, "8 Bytes"},
 		{FloatType, "Float"}
@@ -146,7 +158,7 @@ namespace entity_description
 		0x14,  false, DWordType, "Bullet 3", "",
 	};
 
-	EntityDescription movesetDescriptions[100] = {
+	EntityDescription movesetDescriptions[movesetEntriesCount] = {
 		0x0,  false, DWordType, "1H R1 #1", "",
 		0x4,  false, DWordType, "1H R1 #2", "",
 		0x8,  false, DWordType, "1H R2 #1", "",
@@ -211,5 +223,39 @@ namespace entity_description
 		0xF4,  false, DWordType, "RIPOSTE", "",
 		0xF8,  false, DWordType, "GUARD BREAK STAB", "",
 		0xFC,  false, DWordType, "BACKSTAB", ""
+	};
+
+	EntityDescription weaponsDescriptions[weaponsEntriesCount] = {
+		0x0,  false, DWordType, "Item Entry ID", "",
+		0x4,  false, DWordType, "Visual + Hitbox", "",
+		0x8,  false, DWordType, "Scaling Related", "",
+		0xC,  false, DWordType, "Attack Behavior ID", "",
+		0x10,  false, ByteType, "Category", "",
+		0x14,  false, DWordType, "Flags", "",
+		0x18,  false, WordType, "Strength Requirement", "",
+		0x1A,  false, WordType, "Dexterity Requirement", "",
+		0x1C,  false, WordType, "Intelligence Requirement", "",
+		0x1E,  false, WordType, "Faith Requirement", "",
+		0x20,  false, FloatType, "Weight", "",
+		0x24,  false, FloatType, "Affects Recovery Animation", "",
+		0x28,  false, FloatType, "Max Durability", "",
+		0x34,  false, FloatType, "Stamina Consumtion", "",
+		0x38,  false, FloatType, "Stamina Damage", "",
+		0x74,  false, FloatType, "Parry Multiplier", "",
+		0x80,  false, FloatType, "Damage Multiplier", "",
+		0x88,  false, FloatType, "Equipment Damage Multiplier", "",
+		0x8C,  false, FloatType, "Guardbreak Related", "",
+		0x90,  false, FloatType, "Status Effect Amount", "",
+		0x94,  false, FloatType, "Normalbreak", "",
+		0x98,  false, FloatType, "Hitbox Size", "",
+		0x9C,  false, FloatType, "Hitbox Size 2", "",
+		0xA0,  false, FloatType, "Hitbox Wall Cancel", "",
+		0xA4,  false, FloatType, "Hitbox Wall Cancel", "",
+		0xA8,  false, WordType, "Damage Type", "",
+		0xAA,  false, WordType, "Poise Damage", "",
+		0xAC,  false, WordType, "Counterattack Strength", "",
+		0xAE,  false, WordType, "Casting Speed", "",
+		0xB4,  false, FloatType, "Poise Damage In a Float/10", "",
+		0xB8,  false, FloatType, "Poise Related", "",
 	};
 }

@@ -88,6 +88,9 @@ int ChangeResume::getTypeSize()
 	case MovesetChange:
 		return movesetStructureSize;
 
+	case WeaponsChange:
+		return weaponsStructureSize;
+
 	case NoneChange:
 	default:
 		return 0;

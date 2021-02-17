@@ -149,6 +149,7 @@
     <ClCompile Include="ResumeDialog.cpp" />
     <ClCompile Include="SpellID.cpp" />
     <ClCompile Include="SpellIdDialog.cpp" />
+    <ClCompile Include="WeaponEditor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="DS2BossCreator.h" />
@@ -157,6 +158,10 @@
     <QtRcc Include="DS2BossCreator.qrc" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="WeaponEditor.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+    </QtMoc>
     <CustomBuild Include="DrawingsEditor.h">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing %(Identity)...</Message>

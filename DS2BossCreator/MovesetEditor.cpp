@@ -164,8 +164,6 @@ void MovesetEditor::saveEntity()
 		return;
 	}
 
-	DWORD64 movesetAddress = 0;
-
 	if (!reader.writeMemory((LPVOID)reader.readPointer(movesetPointers[handID], movesetPointerLength), entityData, movesetStructureSize))
 	{
 		QMessageBox(QMessageBox::Critical, "Error", "Couldn't save data").exec();

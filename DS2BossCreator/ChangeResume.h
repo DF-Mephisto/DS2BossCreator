@@ -14,7 +14,8 @@ enum ChangeType
 	EnemyBulletChange,
 	WorldBulletChange,
 	MoveChange,
-	MovesetChange
+	MovesetChange,
+	WeaponsChange
 };
 
 class ChangeResume

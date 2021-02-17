@@ -9,7 +9,7 @@ Head::Head(MemReader& reader, QWidget *parent)
 	loadBtn = new QPushButton("Load", this);
 	attachProcessBtn = new QPushButton("Attach Process", this);
 
-	equipmentDamageChb = new QCheckBox("Disable Equpment Damage", this);
+	equipmentDamageChb = new QCheckBox("Disable Equipment Damage", this);
 
 	QVBoxLayout* saveLoadLayout = new QVBoxLayout;
 	saveLoadLayout->addWidget(saveBtn);

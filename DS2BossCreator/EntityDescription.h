@@ -15,6 +15,7 @@ namespace entity_description
 	{
 		StringType,
 		ByteType,
+		WordType,
 		DWordType,
 		QWordType,
 		FloatType
@@ -58,7 +59,20 @@ namespace entity_description
 		{ 0x160B8D0, 0xD0, 0x7F8, 0xA8 },
 		{ 0x160B8D0, 0xD0, 0x7F8, 0xF0 }
 	};
-	extern EntityDescription movesetDescriptions[100];
+	extern EntityDescription movesetDescriptions[movesetEntriesCount];
+
+	const int weaponsEntriesCount = 31;
+	const int weaponsStructureSize = 188;
+	const int weaponsPointerLength = 4;
+	const DWORD64 weaponsPointers[6][4] = {
+		{ 0x160B8D0, 0xD0, 0x7F8, 0x130 },
+		{ 0x160B8D0, 0xD0, 0x7F8, 0x178 },
+		{ 0x160B8D0, 0xD0, 0x7F8, 0x1C0 },
+		{ 0x160B8D0, 0xD0, 0x7F0, 0x558 },
+		{ 0x160B8D0, 0xD0, 0x7F8, 0xA0 },
+		{ 0x160B8D0, 0xD0, 0x7F0, 0x5E8 }
+	};
+	extern EntityDescription weaponsDescriptions[weaponsEntriesCount];
 
 	const int paramPointerLength = 4;
 	const DWORD64 commonBulletParamPointer[] = { 0x160B8D0, 0x60, 0x20, 0xD8 };
@@ -66,6 +80,7 @@ namespace entity_description
 	const DWORD64 worldBulletParamPointer[] = { 0x160B8D0, 0x60, 0x40, 0xD8 };
 	const DWORD64 moveParamPointer[] = { 0x160B8D0, 0x18, 0x440, 0xD8 };
 	const DWORD64 movesetParamPointer[] = { 0x160B8D0, 0x18, 0x430, 0xD8 };
+	const DWORD64 weaponsParamPointer[] = { 0x160B8D0, 0x18, 0x420, 0xD8 };
 
 	//DRAWINGS SCRIPT
 	const int drawOriginalInstructionSize = 5;

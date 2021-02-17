@@ -165,6 +165,9 @@ DWORD64 ResumeDialog::getAddress(ChangeType type, DWORD64 offset)
 	case MovesetChange:
 		return reader.readPointer(movesetParamPointer, paramPointerLength) + offset;
 
+	case WeaponsChange:
+		return reader.readPointer(weaponsParamPointer, paramPointerLength) + offset;
+
 	default:
 		return 0;
 	}
@@ -183,6 +186,7 @@ int ResumeDialog::getBaseOffset(ChangeType type)
 		return moveBaseOffset;
 
 	case MovesetChange:
+	case WeaponsChange:
 		return 0;
 
 	default:

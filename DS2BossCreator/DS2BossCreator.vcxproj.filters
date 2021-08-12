@@ -108,12 +108,6 @@
     <ClCompile Include="DrawingsEditor.cpp">
       <Filter>Source Files\Editors</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_DrawingsEditor.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_DrawingsEditor.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
     <ClCompile Include="DS2BossCreator.cpp">
       <Filter>Source Files\Widgets</Filter>
     </ClCompile>
@@ -199,8 +193,8 @@
     </MASM>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="DrawingsEditor.h">
+    <QtMoc Include="DrawingsEditor.h">
       <Filter>Header Files\Editors</Filter>
-    </CustomBuild>
+    </QtMoc>
   </ItemGroup>
 </Project>

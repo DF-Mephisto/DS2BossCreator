@@ -107,14 +107,19 @@ DWORD64	MemReader::alloc(int size)
 	while ((freeMemory = baseAddress - offset) <= baseAddress)
 	{
 		VirtualQueryEx(pHandle, (LPCVOID)freeMemory, &mbi, sizeof(MEMORY_BASIC_INFORMATION));
+
 		if (mbi.State == MEM_FREE)
 		{
-			if (allocatedMemory = (DWORD64)VirtualAllocEx(pHandle, (LPVOID)freeMemory, size, MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE))
+			if (allocatedMemory = (DWORD64)VirtualAllocEx(pHandle, (LPVOID)freeMemory, size, MEM_RESERVE, PAGE_EXECUTE_READWRITE))
+			{
+				allocatedMemory = (DWORD64)VirtualAllocEx(pHandle, (LPVOID)allocatedMemory, size, MEM_COMMIT, PAGE_EXECUTE_READWRITE);
 				break;
+			}
 		}
+
 		offset += mbi.RegionSize;
 	}
-
+	//MessageBox(0, to_wstring(allocatedMemory).c_str(), L"FDS", MB_OK);
 	return allocatedMemory;
 }
 

@@ -9,5 +9,6 @@ int main(int argc, char *argv[])
 	app.setWindowIcon(QIcon(":/DS2BossCreator/eye"));
 	DS2BossCreator w;
 	w.show();
+
 	return app.exec();
 }
